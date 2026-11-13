@@ -343,6 +343,72 @@
             margin-bottom: 0;
         }
 
+
+        /* Biodata */
+        .biodata-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .biodata-card {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 20px 22px;
+            transition: border-color 180ms ease, box-shadow 180ms ease;
+        }
+
+        .biodata-card:hover {
+            border-color: #cdc4b2;
+            box-shadow: 0 6px 18px rgba(60, 55, 45, 0.05);
+        }
+
+        .biodata-card h3 {
+            font-size: 1rem;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .biodata-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 9px 0;
+            border-bottom: 1px solid var(--line);
+            font-size: 0.88rem;
+        }
+
+        .biodata-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .biodata-item .label {
+            color: var(--muted);
+            font-weight: 500;
+        }
+
+        .biodata-item .value {
+            color: var(--text);
+            font-weight: 600;
+            text-align: right;
+            overflow-wrap: anywhere;
+        }
+
+        #biodata {
+            scroll-margin-top: 85px;
+        }
+
+        @media (max-width: 640px) {
+            .biodata-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
         /* Contact */
         .contact-grid {
             display: grid;
@@ -483,6 +549,7 @@
             <nav id="nav">
                 <a href="#about">About</a>
                 <a href="#education">Education</a>
+                <a href="#biodata">Biodata</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
@@ -590,6 +657,93 @@
                 </div>
             </div>
         </section>
+
+
+        <!-- ==================== BIODATA ==================== -->
+        <section id="biodata">
+            <h2 class="section-title">Personal Biodata</h2>
+
+            <div class="biodata-grid">
+
+                <!-- Personal Information -->
+                <div class="biodata-card">
+                    <h3>Personal Information</h3>
+
+                    <div class="biodata-item">
+                        <span class="label">Full Name</span>
+                        <span class="value">Matiur Rahman Limon</span>
+                    </div>
+
+                    <div class="biodata-item">
+                        <span class="label">Date of Birth</span>
+                        <span class="value">28/10/2005</span>
+                    </div>
+
+
+                    <div class="biodata-item">
+                        <span class="label">Gender / Sex</span>
+                        <span class="value">Male</span>
+                    </div>
+
+                    <div class="biodata-item">
+                        <span class="label">Nationality</span>
+                        <span class="value">Bangladeshi</span>
+                    </div>
+
+                    <div class="biodata-item">
+                        <span class="label">Religion</span>
+                        <span class="value">Islam</span>
+                    </div>
+
+                    <div class="biodata-item">
+                        <span class="label">Marital Status</span>
+                        <span class="value">Single</span>
+                    </div>
+
+                    <div class="biodata-item">
+                        <span class="label">Blood Group</span>
+                        <span class="value">B+</span>
+                    </div>
+                </div>
+
+                <!-- Family Information -->
+                <div class="biodata-card">
+                    <h3>Family Information</h3>
+
+                    <div class="biodata-item">
+                        <span class="label">Father's Name</span>
+                        <span class="value">Md.Shah Alam</span>
+                    </div>
+
+                    <div class="biodata-item">
+                        <span class="label">Mother's Name</span>
+                        <span class="value">Mst.Lima Begum</span>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="biodata-card">
+                    <h3>Address</h3>
+
+                    <div class="biodata-item">
+                        <span class="label">Present Address</span>
+                        <span class="value">Mirpur-1, Dhaka</span>
+                    </div>
+
+                    <div class="biodata-item">
+                        <span class="label">Permanent Address</span>
+                        <span class="value">Raghurganti,Bahuli,Sirajganj</span>
+                    </div>
+
+                    <div class="biodata-item">
+                        <span class="label">Home District</span>
+                        <span class="value">Sirajganj</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
 
         <!-- ==================== CONTACT ==================== -->
         <section id="contact">
